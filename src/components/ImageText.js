@@ -1,29 +1,21 @@
 import React from 'react';
-import '../index.css';
-import frameImage from '../assets/frame.png';
+import './styles/ImageText.css'; // Assuming your stylesheet is at ImageText.css
 
 const ImageText = () => {
     return (
-        <div className="ImageTextContainer">
-            <div className="ImageContainer">
-                <img src={frameImage} alt="Frame" className="FrameImage" />
-            </div>
-            <div className="TextContainer">
-                <h1>New Driver</h1>
-                <p>New to driving, don't worry we got you covered.</p>
-                <p>Classes Offered</p>
-                <ul>
+        <div className="image-text-container">
 
-                    <li>A1</li>
-                    <li>A2</li>
-                    <li>B1</li>
-                    <li>B2</li>
-                </ul>
-                <div className="Banner">
-                    <p>@ Ksh 15000 only</p>
-                </div>
-                <button className="JoinButton">Join Us</button>
+            <div className="text-container">
+                <h2>New Student Offer!</h2>
+                <p>
+                    Get your driver's license at an affordable price! Enroll now and enjoy a discount for new students.
+                </p>
+                <p>
+                    <b>Cost: Ksh. 15,000</b>
+                </p>
+                <button className="enroll-button">Enroll Now</button>
             </div>
+            <img src="/background.jpeg" alt="New Student Driving School Offer" className="image" />
         </div>
     );
 };

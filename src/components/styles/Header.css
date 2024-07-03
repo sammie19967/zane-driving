@@ -1,0 +1,50 @@
+.HeaderContainer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-bottom: 2px solid #e9ecef;
+  width: 100%;
+}
+
+.HeaderTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ContactInfo,
+.SocialMedia {
+  display: flex;
+  gap: 15px;
+}
+
+.ContactLink,
+.SocialLink {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+}
+
+.ContactLink:hover,
+.SocialLink:hover {
+  color: #0056b3;
+}
+
+.SocialLink {
+  display: flex;
+  align-items: center;
+}
+
+.HeaderBottom {
+  text-align: center;
+}
+
+.SchoolName {
+  font-size: 24px;
+  font-weight: bold;
+  color: #343a40;
+}

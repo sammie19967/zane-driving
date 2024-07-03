@@ -1,0 +1,86 @@
+/* General Navbar styling */
+.NavContainer {
+  background-color: #343a40;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.NavLogo .Logo {
+  height: 40px;
+}
+
+.NavMenu {
+  display: flex;
+  gap: 20px;
+}
+
+.NavList {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.NavItem {
+  display: flex;
+  align-items: center;
+}
+
+.NavLink {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.NavLink:hover,
+.ActiveLink {
+  background-color: #007bff;
+  color: white;
+}
+
+.NavIcon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .NavMenu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .NavMenu.responsive {
+    display: flex;
+  }
+
+  .NavList {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .NavItem {
+    width: 100%;
+  }
+
+  .NavLink {
+    text-align: center;
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  .NavIcon {
+    display: block;
+  }
+}

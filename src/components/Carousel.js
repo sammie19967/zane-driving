@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import '../index.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import './styles/Carousel.css';
 import drivingImage from '../assets/driving-course.png';
 import computerImage from '../assets/computer-course.png';
 

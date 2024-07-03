@@ -1,0 +1,132 @@
+/* Footer.css */
+.footer {
+  background-color: #007bff;
+  color: #f8f9fa;
+
+  font-family: Arial, sans-serif;
+  animation: fadeIn 1s ease-in-out;
+  margin: 0%;
+}
+
+.footer-content {
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-section {
+  margin: 20px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideIn 0.5s forwards ease-in-out;
+}
+
+.footer-section.about {
+  width: 100%;
+}
+
+.footer-section h2 {
+  color: #f8f9fa;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.footer-section p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.footer-section .contact div,
+.footer-section-hours ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section .contact div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.footer-section .contact div svg,
+.footer-section .socials a svg {
+  margin-right: 10px;
+}
+
+.footer-section .socials {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.footer-section .socials a {
+  color: #f8f9fa;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: color 0.3s;
+  text-decoration: none; /* Ensure no underline on links */
+}
+
+.footer-section .socials a:hover {
+  color: #007bff;
+}
+
+.footer-section-links ul,
+.footer-section-hours ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section-links ul li,
+.footer-section-hours ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section-links ul li a {
+  color: #f8f9fa;
+  text-decoration: none; /* Remove text decoration */
+  transition: color 0.3s;
+}
+
+.footer-section-links ul li a:hover {
+  color: #007bff;
+  text-decoration: none; /* Ensure no underline on hover */
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #495057;
+  margin-top: 20px;
+  font-size: 14px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-section {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
