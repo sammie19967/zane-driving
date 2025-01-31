@@ -1,0 +1,54 @@
+.typewriter-container {
+  text-align: center;
+  padding-top: 50px;
+}
+
+h1 {
+  font-size: 10px;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+.typed-text {
+  font-weight: bold;
+  /* Animation for smooth color changes */
+  animation: color-change 3s infinite alternate;
+}
+
+/* Custom blinking cursor */
+.typed-cursor {
+  color: #00bfff;
+  font-weight: 100;
+  animation: blink 0.7s infinite;
+}
+
+/* Blinking effect for cursor */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Color change animation for typed text */
+@keyframes color-change {
+  0% {
+    color: #f39c12;
+  }
+  50% {
+    color: #3498db;
+  }
+  100% {
+    color: #e74c3c;
+  }
+}
+@media (max-width: 600px) {
+  h1 {
+    text-transform:lowercase;
+  }
+}

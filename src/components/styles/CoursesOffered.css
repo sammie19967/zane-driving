@@ -1,0 +1,51 @@
+/* CoursesOffered.css */
+
+.courses-offered-container {
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  background: #0056b3;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.courses-offered-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.courses-offered-container div {
+  margin-bottom: 15px;
+}
+
+.courses-offered-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.courses-offered-container select {
+  width: 50%;
+  padding: 8px;
+  border: 1px #1708f1;
+  border-radius: 4px;
+}
+
+.fees-structure {
+  text-align: center;
+}
+
+.fees-structure a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+}
+
+.fees-structure a:hover {
+  background-color: #0056b3;
+}

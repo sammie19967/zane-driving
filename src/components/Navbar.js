@@ -1,44 +1,45 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import "./styles/Navbar.css";
+import './styles/Nav.css';
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
-        setIsOpen(!isOpen);
+        setMenuOpen(!menuOpen);
     };
 
     return (
-        <nav className="NavContainer">
-            <div className="NavLogo">
-                <img src="/logo.png" alt="zanedriving" className="Logo" />
+        <nav className="navbar">
+            <div className="nav-brand">
+                {/* Replace brand name with logo */}
+                <img src="/logo.png" alt="Zane Driving School Logo" className="logo" />
             </div>
-            <div className={`NavMenu ${isOpen ? 'responsive' : ''}`}>
-                <ul className="NavList">
+            
+            <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
+                <ul>
                     <li className="NavItem">
                         <NavLink
-                            exact="true"
                             to="/"
                             className={({ isActive }) => (isActive ? 'NavLink ActiveLink' : 'NavLink')}
                         >
-                            Home
+                            <i className="fas fa-home"></i> Home
                         </NavLink>
                     </li>
                     <li className="NavItem">
                         <NavLink
-                            to="/about"
+                            to="/admission"
                             className={({ isActive }) => (isActive ? 'NavLink ActiveLink' : 'NavLink')}
                         >
-                            About
+                            <i className="fas fa-user-graduate"></i> Admission
                         </NavLink>
                     </li>
                     <li className="NavItem">
                         <NavLink
-                            to="/services"
+                            to="/courses"
                             className={({ isActive }) => (isActive ? 'NavLink ActiveLink' : 'NavLink')}
                         >
-                            Services
+                            <i className="fas fa-book"></i> Courses
                         </NavLink>
                     </li>
                     <li className="NavItem">
@@ -46,14 +47,39 @@ const Navbar = () => {
                             to="/contact"
                             className={({ isActive }) => (isActive ? 'NavLink ActiveLink' : 'NavLink')}
                         >
-                            Contact
+                            <i className="fas fa-envelope"></i> Contact
+                        </NavLink>
+                    </li>
+                    <li className="NavItem">
+                        <NavLink
+                            to="/team"
+                            className={({ isActive }) => (isActive ? 'NavLink ActiveLink' : 'NavLink')}
+                        >
+                            <i className="fas fa-users"></i> Our Team
+                        </NavLink>
+                    </li>
+                    <li className="NavItem">
+                        <NavLink
+                            to="/gallery"
+                            className={({ isActive }) => (isActive ? 'NavLink ActiveLink' : 'NavLink')}
+                        >
+                            <i className="fas fa-image"></i> Gallery
+                        </NavLink>
+                    </li>
+                    <li className="NavItem">
+                        <NavLink
+                            to="/about"
+                            className={({ isActive }) => (isActive ? 'NavLink ActiveLink' : 'NavLink')}
+                        >
+                            <i className="fas fa-info-circle"></i> About Us
                         </NavLink>
                     </li>
                 </ul>
             </div>
-            <div className="NavIcon" onClick={toggleMenu}>
-                <i className="fa fa-bars"></i>
-            </div>
+            
+            <button className="NavIcon" aria-label="Toggle Menu" onClick={toggleMenu}>
+                <i className={`fa ${menuOpen ? 'fa-times' : 'fa-bars'}`}></i>
+            </button>
         </nav>
     );
 };

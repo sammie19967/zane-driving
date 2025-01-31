@@ -4,10 +4,21 @@ import '../index.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './styles/Carousel.css';
-import drivingImage from '../assets/driving-course.png';
-import computerImage from '../assets/computer-course.png';
+import drivingImage from '../assets/carousel1.jpg';
+import computerImage from '../assets/carousel2.jpg';
+import { useNavigate } from 'react-router-dom';
+
+
 
 const Carousel = () => {
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate('/Computers');
+    };
+
+    const handleSubmit = () => {
+        navigate('/ApplicationForm');
+    };
     const settings = {
         dots: true,
         infinite: true,
@@ -26,14 +37,14 @@ const Carousel = () => {
                 <img src={drivingImage} alt="Driving Course" className="CarouselImage" />
                 <div className="CarouselTextContainer">
                     <h2>Driving Courses Offered</h2>
-                    <button className="CarouselButton">Join Us Today</button>
+                    <button className="CarouselButton" onClick={handleSubmit}>Join Us Today</button>
                 </div>
             </div>
             <div className="CarouselSlide">
                 <img src={computerImage} alt="Computer Course" className="CarouselImage" />
                 <div className="CarouselTextContainer">
                     <h2>Computer Packages Available</h2>
-                    <button className="CarouselButton">Book Now</button>
+                    <button className="CarouselButton" onClick={handleClick}>Book Now</button>
                 </div>
             </div>
         </Slider>
@@ -45,7 +56,7 @@ const SampleNextArrow = (props) => {
     return (
         <div
             className={className}
-            style={{ ...style, display: 'block', background: '#000' }}
+            style={{ ...style, display: 'block', background: '###' }}
             onClick={onClick}
         />
     );
@@ -56,7 +67,7 @@ const SamplePrevArrow = (props) => {
     return (
         <div
             className={className}
-            style={{ ...style, display: 'block', background: '#000' }}
+            style={{ ...style, display: 'block', background: '###' }}
             onClick={onClick}
         />
     );

@@ -1,0 +1,50 @@
+/* Why Choose Us Component Styles */
+.why-choose-us {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .why-choose-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #2011f1; /* Brand color */
+  }
+  
+  .features-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .feature {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 15px;
+    width: 280px;
+    transition: transform 0.3s ease;
+  }
+  
+  .feature:hover {
+    transform: translateY(-5px);
+  }
+  
+  .feature-icon {
+    font-size: 40px;
+    color: #007bff; /* Icon color */
+    margin-bottom: 10px;
+  }
+  
+  .feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .feature p {
+    font-size: 1rem;
+    color: #666;
+  }
+  

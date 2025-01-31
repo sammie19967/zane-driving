@@ -9,7 +9,7 @@ const ImageText2 = () => {
                 <img src={frameImage} alt="Frame" className="FrameImage" />
             </div>
             <div className="TextContainer">
-                <h1>Refresh Driver</h1>
+                <h1>Refresher Course and Endorsement</h1>
                 <p>Do you know how to drive but need to elevate your skills?We have a place for you</p>
                 <p>Refresher Classes Offered</p>
                 <ul>

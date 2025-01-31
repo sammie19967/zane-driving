@@ -1,0 +1,111 @@
+.computer-catalogue-container {
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif; /* Change font family for better readability */
+}
+
+h1 {
+  font-size: 2.5rem; /* Increase header size */
+  margin-bottom: 30px; /* Space below header */
+  color: #333; /* Darker color for better contrast */
+}
+
+.courses-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center items */
+  gap: 20px; /* Space between items */
+}
+
+.course-item {
+  width: 300px; /* Fixed width for each card */
+  min-height: 350px; /* Increased minimum height for better content fit */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* Clip overflow */
+  transition: transform 0.3s; /* Smooth scaling effect */
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px; /* 3D perspective */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d; /* Preserve 3D */
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg); /* Rotate on hover */
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide back face */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  padding: 20px; /* Add padding for better content spacing */
+}
+
+.flip-card-front {
+  background-color: #fff; /* White background for front */
+  color: #000; /* Black text for front */
+}
+
+.flip-card-back {
+  transform: rotateY(180deg); /* Rotate back face */
+  background-color: #f8f8f8; /* Light background for back */
+  color: #333; /* Darker text for better readability */
+  padding: 20px; /* Add padding for spacing */
+}
+
+h2 {
+  font-size: 1.5rem; /* Increase font size for titles */
+  margin: 10px 0; /* Margin for spacing */
+}
+
+p {
+  font-size: 1rem; /* Set font size for description */
+  margin: 5px 0; /* Space between paragraphs */
+  line-height: 1.5; /* Line height for readability */
+}
+
+button {
+  margin-top: 15px; /* Increase space above the button */
+  padding: 12px 20px; /* Add padding to button */
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white; /* White text on button */
+  font-size: 1rem; /* Button text size */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .course-item {
+      width: 90%; /* Full width on small screens */
+      min-height: 300px; /* Adjust height */
+  }
+}
+
+@media (min-width: 769px) {
+  .course-item {
+      width: calc(33% - 20px); /* Three items per row with gap */
+  }
+}

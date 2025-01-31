@@ -2,18 +2,39 @@ import React from 'react';
 import './styles/Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faEnvelope, faMapMarkerAlt, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return (
-        <footer className="footer">
+        <footer className="new-footer">
             <div className="footer-content">
                 <div className="footer-section about">
                     <img src="/logo.png" alt="Zane Driving School Logo" className="logo" />
-                    <p>
-                        Zane Driving School is committed to providing top-notch driving education and road safety training. Join us to become a safe and confident driver.
+                    <p className="description">
                     </p>
-                    <div className="contact">
+                    <div className="socials">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faFacebook} size="2x" />
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faTwitter} size="2x" />
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faInstagram} size="2x" />
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                        </a>
+                    </div>
+                </div>
+
+                <div className="footer-section contact">
+                    <h2>Contact Us</h2>
+                    <div className="contact-info">
                         <div>
                             <FontAwesomeIcon icon={faPhone} /> +254725153581
                         </div>
@@ -24,16 +45,10 @@ const Footer = () => {
                             <FontAwesomeIcon icon={faMapMarkerAlt} /> 123 Driving School Lane, Nairobi, Kenya
                         </div>
                     </div>
-                    <div className="socials">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebook} /></a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} /></a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} /></a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a>
-                    </div>
                 </div>
 
-                <div className="footer-section-links">
-                    <h2>Useful Links</h2>
+                <div className="footer-section links">
+                    <h2>Quick Links</h2>
                     <ul>
                         <li><a href="/about">About Us</a></li>
                         <li><a href="/services">Our Services</a></li>
@@ -41,18 +56,13 @@ const Footer = () => {
                         <li><a href="/faq">FAQs</a></li>
                     </ul>
                 </div>
-
-                <div className="footer-section-hours">
-                    <h2>Office Hours</h2>
-                    <ul>
-                        <li>Monday - Friday: 8:00 AM - 5:00 PM</li>
-                        <li>Saturday: 9:00 AM - 1:00 PM</li>
-                        <li>Sunday: Closed</li>
-                    </ul>
-                </div>
             </div>
+
             <div className="footer-bottom">
-                &copy; 2024 Zane Driving School | Designed by Monsieur Barasa
+                <button onClick={scrollToTop} className="to-top-button">
+                    <FontAwesomeIcon icon={faArrowUp} /> Back to Top
+                </button>
+                <p>&copy; 2024 Zane Driving School | All rights reserved.</p>
             </div>
         </footer>
     );

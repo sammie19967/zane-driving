@@ -1,7 +1,13 @@
+
 import React from 'react';
-import './styles/ImageText.css'; // Assuming your stylesheet is at ImageText.css
+import './styles/ImageText.css';
+import { useNavigate } from 'react-router-dom';
 
 const ImageText = () => {
+    const navigate = useNavigate();
+    const handleEnrollClick = () => {
+        navigate('./ApplicationForm');
+    };
     return (
         <div className="image-text-container">
 
@@ -13,9 +19,9 @@ const ImageText = () => {
                 <p>
                     <b>Cost: Ksh. 15,000</b>
                 </p>
-                <button className="enroll-button">Enroll Now</button>
+                <button className="enroll-button" onClick={handleEnrollClick}>Enroll Now</button>
             </div>
-            <img src="/background.jpeg" alt="New Student Driving School Offer" className="image" />
+            <img src="/newstudent.jpg" alt="New Student Driving School Offer" className="image" />
         </div>
     );
 };

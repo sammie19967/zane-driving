@@ -9,22 +9,27 @@ const Header = () => {
         <header className="HeaderContainer">
             <div className="HeaderTop">
                 <div className="ContactInfo">
-                    <a href="tel:0725153581" className="ContactLink">
-                        <FontAwesomeIcon icon={faPhone} /> contact 1
+                    <a href="tel:+254717612213" className="ContactLink">
+                        <FontAwesomeIcon icon={faPhone} />
+                        <span>0717612213</span>
                     </a>
-                    <a href="tel:0725713192" className="ContactLink">
-                        <FontAwesomeIcon icon={faPhone} /> contact 2
+                    <a href="tel:+254115820508" className="ContactLink">
+                        <FontAwesomeIcon icon={faPhone} />
+                        <span>0115820508</span>
                     </a>
-                    <a href="zanedrivingschool2022@gmail.com" className="ContactLink">
-                        <FontAwesomeIcon icon={faEnvelope} /> zanedrivingschool2022@gmail.com
+                    <a href="mailto:zanedrivingschool2022@gmail.com" className="ContactLink">
+                        <FontAwesomeIcon icon={faEnvelope} />
+                        <span>zanedrivingschool2022@gmail.com</span>
                     </a>
                 </div>
                 <div className="SocialMedia">
-                    <a href="https://wa.me/0725153581" className="SocialLink" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faWhatsapp} />Whatsapp
+                    <a href="https://wa.me/+254115820508" className="SocialLink" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faWhatsapp} />
+                        <span>Whatsapp</span>
                     </a>
                     <a href="https://facebook.com/zanedrivingschool" className="SocialLink" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faFacebook} />{" "}Like us on Facebook
+                        <FontAwesomeIcon icon={faFacebook} />
+                        <span>Facebook</span>
                     </a>
                 </div>
             </div>

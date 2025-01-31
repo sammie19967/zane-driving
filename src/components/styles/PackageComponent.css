@@ -1,115 +1,117 @@
-/* PackageComponent.css */
-
+/* General container styling */
 .package-container {
-  padding: 20px;
-  background-color: #f9f9f9;
-  font-family: "Arial", sans-serif;
   max-width: 1200px;
-  margin: auto;
-  border: 1px solid #ddd;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0f4f8;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 1000px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.package-container h2 {
-  font-size: 26px;
-  margin-bottom: 20px;
-  color: #333;
+.package-title {
   text-align: center;
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 30px;
 }
 
 .package-content {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .package-image {
-  width: 300px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  flex-shrink: 0;
-  border: 3px solid #007bff;
+  width: 50%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .package-text {
-  max-width: 600px;
+  width: 45%;
   text-align: left;
 }
 
-.package-text p {
+.description {
   font-size: 18px;
-  line-height: 1.8;
+  line-height: 1.6;
   color: #555;
   margin-bottom: 20px;
 }
 
 .package-list {
-  list-style-type: disc;
-  padding-left: 20px;
-  margin: 10px 0;
-  color: #007bff;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
 }
 
 .package-list li {
-  font-size: 16px;
-  color: #007bff;
-  margin-bottom: 8px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
+/* Icon styles for specific software */
+.icon {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.word-icon {
+  color: #0078d4; /* Blue for MS Word */
+}
+
+.excel-icon {
+  color: #107c41; /* Green for MS Excel */
+}
+
+.ppt-icon {
+  color: #d24726; /* Orange for MS PowerPoint */
+}
+
+.access-icon {
+  color: #a4373a; /* Red for MS Access */
+}
+
+/* Price tag styling */
 .price-tag {
   font-size: 24px;
-  color: #d75252;
-  margin: 20px 0;
-  border: 2px solid #ff4500;
-  padding: 10px;
-  display: inline-block;
-  border-radius: 5px;
-  margin: 20px;
+  font-weight: bold;
+  color: #ff5722;
+  margin-bottom: 20px;
 }
 
+/* Apply button styling */
 .apply-button {
-  display: inline-block;
-  padding: 12px 24px;
-  font-size: 24px;
+  padding: 12px 30px;
+  font-size: 16px;
   color: #fff;
-  background-color: #007bff;
+  background-color: #28a745;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  text-transform: uppercase;
 }
 
 .apply-button:hover {
-  background-color: #f6f9fc;
-  border: #007bff 2px solid;
-  color: #007bff;
+  background-color: #218838;
 }
 
-/* Responsive Design */
+/* Responsive styles */
 @media (max-width: 768px) {
-  .package-container {
-    width: auto;
-    margin: auto;
-  }
-
   .package-content {
-    flex-direction: column;
-    text-align: center;
+      flex-direction: column;
+      text-align: center;
   }
 
   .package-image {
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 20px;
+      width: 100%;
+      margin-bottom: 20px;
   }
 
   .package-text {
-    max-width: 100%;
+      width: 100%;
   }
 }

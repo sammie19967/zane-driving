@@ -3,13 +3,33 @@
   margin: 0px;
   padding: 0px;
 }
-body {
-  margin: 20px;
-  margin-top: 0px;
-}
+
 .welcome-text {
   font-size: 20px;
   font-weight: bold;
   color: #2360eee4;
   text-align: center;
+}
+
+.services-catalogue {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.services-catalogue h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #225fedd8;
+}
+.fullcatalogue {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 0 auto;
+  width: 100%;
+  background-color: rgb(249, 250, 246);
+}
+html {
+  scroll-behavior: smooth;
 }

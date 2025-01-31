@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #2011f1;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1001; /* Ensure it's higher than the menu */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+.navbar .logo {
+  height: 60px; /* Adjust height as needed */
+  
+  margin-right: 20px; /* Space between logo and menu */
+  border-radius: 10px;
+  width: 90px;
+  
+}
+
+
+.nav-brand h1 {
+  font-size: 24px;
+  color: white;
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.NavItem a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.NavItem a:hover {
+  background-color: #f6f4fc; /* Darker background on hover */
+  color: springgreen;        /* Change text color on hover */
+  padding: 5px 10px;         /* Add padding for smoother effect */
+  border-radius: 5px;        /* Rounded edges on hover */
+}
+
+.NavItem a i {
+  margin-right: 10px;
+}
+
+.NavItem a.ActiveLink {
+  border-bottom: 3px solid #fff;
+  padding-bottom: 5px;
+}
+
+.NavIcon {
+  display: none;
+  font-size: 24px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #0e0241;
+    width: 60%;
+    height: 100vh;
+    padding-top: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: all 0.3s ease-in-out;
+    z-index: 1; 
+  }
+
+  .nav-links.open {
+    display: flex;
+   
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 30px;
+    width: 60%;
+    padding-left: 20px;
+    font-size: 40px;
+    z-index: 0;
+  }
+
+  .NavItem a {
+    width: 100%;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .NavItem a:hover {
+    background-color: #fff; /* Lighter background on hover */
+    color: #0e0241;         /* Darker text color on hover */
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+
+  .NavItem a.ActiveLink {
+    border-bottom: 2px solid springgreen;
+    padding: 5px;
+  }
+
+  .NavIcon {
+    display: block;
+  }
+}

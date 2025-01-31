@@ -9,7 +9,7 @@ const locationLinks = {
 };
 
 const MapComponent = () => {
-    const [selectedLocation, setSelectedLocation] = useState('Kaiboi');
+    const [selectedLocation, setSelectedLocation] = useState('Nakuru');
 
     const handleLocationChange = (location) => {
         setSelectedLocation(location);
@@ -24,7 +24,7 @@ const MapComponent = () => {
                 <button onClick={() => handleLocationChange('Nakuru')}>Nakuru</button>
                 <button onClick={() => handleLocationChange('Eldoret')}>Eldoret</button>
             </nav>
-            <div style={{ height: "400px", width: "600px", marginTop: "20px" }}>
+            <div style={{ height: "400px", width: "98%", marginTop: "20px" }}>
                 <iframe
                     src={locationLinks[selectedLocation]}
                     width="100%"

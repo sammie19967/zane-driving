@@ -1,0 +1,43 @@
+/* styles/Motto.css */
+
+.motto-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  flex-wrap: wrap;
+}
+
+.motto-text {
+  flex: 1;
+  text-align: center;
+  margin: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  color: #333;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .motto-container {
+    flex-direction: column;
+  }
+
+  .motto-text {
+    margin: 20px 0;
+  }
+}
